@@ -18,6 +18,11 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // InTune specific variants
+        warm: "bg-warm-brown text-primary-foreground hover:bg-warm-brown/90 shadow-md hover:shadow-lg transition-all duration-300",
+        message: "bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-6 py-2 font-semibold transition-all duration-300 hover:scale-105",
+        hero: "bg-gradient-to-r from-warm-brown to-accent text-primary-foreground hover:shadow-lg transition-all duration-300 hover:scale-105",
+        nav: "text-foreground hover:text-accent transition-colors duration-200",
       },
       size: {
         default: "h-10 px-4 py-2",

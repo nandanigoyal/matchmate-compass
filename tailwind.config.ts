@@ -52,6 +52,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
+				// InTune Theme Colors
+				'warm-brown': 'hsl(var(--warm-brown))',
+				'light-beige': 'hsl(var(--light-beige))',
+				'cream': 'hsl(var(--cream))',
+				'dark-brown': 'hsl(var(--dark-brown))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
