@@ -68,7 +68,7 @@ const MatchCard = ({ match, rank, onMessage }: MatchCardProps) => {
               <h3 className="text-lg font-semibold text-foreground">{match.anon_id}</h3>
               <div className="flex items-center space-x-2">
                 <Key className="h-4 w-4 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">{match.chatroom_passkey}</span>
+                <span className="text-sm text-muted-foreground">PassKey: {match.chatroom_passkey}</span>
               </div>
             </div>
           </div>

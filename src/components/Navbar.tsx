@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import intuneLogoCircle from "@/assets/intune-logo-circle.png";
+import userAvatarCircle from "@/assets/user-avatar-circle.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,8 +18,13 @@ const Navbar = () => {
     <nav className="bg-background border-b border-border sticky top-0 z-50 backdrop-blur-sm bg-background/95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
+          {/* Logo with Circle */}
+          <div className="flex items-center space-x-3">
+            <img 
+              src={intuneLogoCircle} 
+              alt="InTune Logo" 
+              className="w-10 h-10 rounded-full object-cover"
+            />
             <h1 className="text-2xl font-bold text-primary">InTune</h1>
           </div>
 
@@ -36,18 +43,26 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Desktop Auth Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" className="border-border hover:bg-muted">
-              Login
-            </Button>
-            <Button variant="warm">
-              Sign Up
-            </Button>
+          {/* User Avatar */}
+          <div className="hidden md:flex items-center">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-warm-brown to-accent p-0.5 cursor-pointer hover:scale-105 transition-transform duration-200">
+              <img 
+                src={userAvatarCircle} 
+                alt="User Avatar" 
+                className="w-full h-full rounded-full object-cover bg-background"
+              />
+            </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-3">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-warm-brown to-accent p-0.5">
+              <img 
+                src={userAvatarCircle} 
+                alt="User Avatar" 
+                className="w-full h-full rounded-full object-cover bg-background"
+              />
+            </div>
             <Button
               variant="ghost"
               size="icon"
@@ -71,14 +86,6 @@ const Navbar = () => {
                   {link.name}
                 </Button>
               ))}
-              <div className="border-t border-border pt-3 space-y-2">
-                <Button variant="outline" className="w-full">
-                  Login
-                </Button>
-                <Button variant="warm" className="w-full">
-                  Sign Up
-                </Button>
-              </div>
             </div>
           </div>
         )}

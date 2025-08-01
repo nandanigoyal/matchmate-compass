@@ -9,10 +9,10 @@ import MatchAnalytics from "@/components/MatchAnalytics";
 import { TrendingUp, Users, Heart, MessageSquare } from "lucide-react";
 import heroImage from "@/assets/hero-roommates.jpg";
 
-// Mock data - In a real app, this would come from an API
+// Mock data with user-specified IDs and passkeys
 const mockMatches = [
   {
-    anon_id: "User#A32B",
+    anon_id: "MOON_1305",
     match_score: 88,
     criteria_scores: {
       cleanliness: 92,
@@ -21,10 +21,10 @@ const mockMatches = [
       lifestyle: 88,
       food: 65
     },
-    chatroom_passkey: "#key_T83kZ9"
+    chatroom_passkey: "123"
   },
   {
-    anon_id: "User#F91X",
+    anon_id: "CLOUD_7097",
     match_score: 85,
     criteria_scores: {
       cleanliness: 88,
@@ -33,10 +33,10 @@ const mockMatches = [
       lifestyle: 85,
       food: 75
     },
-    chatroom_passkey: "#key_M42pL7"
+    chatroom_passkey: "456"
   },
   {
-    anon_id: "User#K17Y",
+    anon_id: "SUN_5672",
     match_score: 82,
     criteria_scores: {
       cleanliness: 85,
@@ -45,10 +45,10 @@ const mockMatches = [
       lifestyle: 80,
       food: 80
     },
-    chatroom_passkey: "#key_R89nQ3"
+    chatroom_passkey: "777"
   },
   {
-    anon_id: "User#D55W",
+    anon_id: "STAR_4357",
     match_score: 79,
     criteria_scores: {
       cleanliness: 80,
@@ -57,10 +57,10 @@ const mockMatches = [
       lifestyle: 82,
       food: 73
     },
-    chatroom_passkey: "#key_V16sK4"
+    chatroom_passkey: "098"
   },
   {
-    anon_id: "User#P28G",
+    anon_id: "CLOUD_8433",
     match_score: 76,
     criteria_scores: {
       cleanliness: 75,
@@ -69,18 +69,19 @@ const mockMatches = [
       lifestyle: 76,
       food: 69
     },
-    chatroom_passkey: "#key_H94mX2"
+    chatroom_passkey: "678"
   }
 ];
 
 const MatchMeter = () => {
   const { toast } = useToast();
   const [matches] = useState(mockMatches);
+  const currentUser = "MOON_3289"; // Main ID taken - current user
 
   const handleMessage = (passkey: string) => {
     toast({
       title: "Opening Chat Room",
-      description: `Connecting you to chat room ${passkey}...`,
+      description: `Connecting you to chat room with PassKey: ${passkey}...`,
       duration: 3000,
     });
     
